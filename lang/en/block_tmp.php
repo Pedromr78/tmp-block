@@ -21,6 +21,7 @@
  * @copyright Year, You Name <your@email.address>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
 $string['time'] = 'Tiempo invertido:';
 $string['pluginname'] = 'Tmp';
 $string['tmp'] = 'Time Block Dedication';
