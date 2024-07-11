@@ -25,7 +25,10 @@
 $string['time'] = 'Tiempo invertido:';
 $string['pluginname'] = 'Tmp';
 $string['tmp'] = 'Time Block Dedication';
-
-
+$string['defaultstring'] = '2';
+$string['settings_heading'] = 'Tmp configuration';
+$string['settings_content'] = 'Configuration';
+$string['label'] = 'Limit click';
+$string['label_desc'] = 'Limit between user face clicks ';
 // $string['nowtime:addinstance'] = 'Add a new pluginname block';
 // $string['nowtime:myaddinstance'] = 'Add a new pluginname block to the My Moodle page';

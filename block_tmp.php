@@ -1,4 +1,6 @@
+
 <?php
+include_once('time.php');
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -30,7 +32,9 @@ class block_tmp extends block_base {
      * @return void
      */
     public function init() {
+        
         $this->title = get_string('tmp', 'block_tmp');
+     
     }
     function has_config(){
         return true;
@@ -42,15 +46,17 @@ class block_tmp extends block_base {
      * @return string The block HTML.
      */
     public function get_content() {
-        global $OUTPUT;
+       
 
         if ($this->content !== null) {
             return $this->content;
         }
-
+        ;
+       
+       
         $this->content = new stdClass();
         $this->content->text .= html_writer::div(get_string('time', 'block_tmp'));
-        $this->content->text .= html_writer::div(' 28 horas y 32 segundos');
+        $this->content->text .= html_writer::div(get_time());
         // $this->content->footer = 'Your footer';
 
         // Add logic here to define your template data or any other content.
@@ -61,6 +67,7 @@ class block_tmp extends block_base {
         return $this->content;
     }
 
+
     /**
      * Defines in which pages this block can be added.
      *
@@ -69,10 +76,11 @@ class block_tmp extends block_base {
     public function applicable_formats() {
         return [
             'admin' => false,
-            'site-index' => true,
+            'site-index' => false,
             'course-view' => true,
             'mod' => false,
-            'my' => true,
+            'my' => false,
         ];
     }
+   
 }
